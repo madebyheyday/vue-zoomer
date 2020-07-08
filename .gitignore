@@ -1,7 +1,7 @@
 .DS_Store
 
 .cache/
-dist/
+dist/demo
 node_modules/
 esm/
 
