@@ -156,8 +156,8 @@ export default {
         let pixelDeltaY = newMousePosY - this.pointerPosY
         // console.log('pixelDeltaX, pixelDeltaY', pixelDeltaX, pixelDeltaY)
         if (!this.panLocked) {
-          this.translateX += pixelDeltaX / this.containerWidth
-          this.translateY += pixelDeltaY / this.containerHeight
+          this.translateX += (pixelDeltaX * 2.2) / this.containerWidth
+          this.translateY += (pixelDeltaY * 2.2) / this.containerHeight
         }
       }
       this.pointerPosX = newMousePosX
@@ -245,7 +245,7 @@ export default {
       // console.log('loop', this.raf)
     },
     gainOn (from, to) {
-      let delta = (to - from) * 0.3
+      let delta = (to - from) * 0.15
       // console.log('gainOn', from, to, from + delta)
       if (Math.abs(delta) > 1e-5) {
         return from + delta
